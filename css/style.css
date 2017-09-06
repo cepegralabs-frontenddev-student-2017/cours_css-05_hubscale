@@ -1,74 +1,42 @@
-/* H E A D E R */
-header {
-  width: 100%;
-  height: 80px;
-  padding: 0 30px;
-
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
+/* GENERAL SETTINGS */
+html {
+  box-sizing: border-box;
 }
-nav {
-  width: 700px;
-  margin: 0 20px;
-
-  justify-content: space-around;
-  align-items: center;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
-nav, ul  {
-  display: flex;
-  flex-flow: row nowrap;
+a {
+  text-decoration: none;
 }
 ul {
-  width: 500px;
-  justify-content: space-around;
+  list-style-type: none;
 }
-header img {
-  width: 150px;
-}
-header .btn {
-  width: 150px;
-  height: 35px;
-
-  font-size: 12px;
-  line-height: 20px;
-}
-/* M A I N */
-#intro {
-  width: 100%;
-  height: 400px;
-  background-color: #000;
-}
-
-/* BENEFITS & FEATURES PAGE */
-
-
-/* FEATURES PAGE */
-#feats {
-  padding: 50px 0;
-
+main {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
+}
+section {
+  padding: 60px 0;
+}
+.wrapper-big {
+  width: 1120px;
+}
+.wrapper-small {
+  width: 1008px;
+}
+.wrapper-smaller {
+  width: 832px;
+}
+.wrapper-small, .wrapper-big, .wrapper-smaller {
+  margin: 0 auto;
+}
 
-  background-color: #F9F9F9;
-}
-#feats .wrapper-big {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-.block {
-  width: 250px;
-  padding: 15px;
-}
-
-/* F O O T E R */
 
 /* FONT SETTINGS */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
 h1, .btn, h4, h5, figcaption, .btn {
   font-family: 'Raleway', sans-serif;
 }
@@ -79,23 +47,28 @@ h1 {
   font-size: 60px;
   line-height: 70px;
   font-weight: 800;
+  margin-bottom: 40px;
 }
 h2 {
   font-size: 24px;
   line-height: 36px;
+  margin-bottom: 60px;
 }
 h3 {
   font-size: 32px;
   line-height: 50px;
+  margin-bottom: 15px;
 }
 h4 {
   font-size: 20px;
   line-height: 22px;
+  margin-bottom: 40px;
 }
 h5 {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 h4, h5 {
   letter-spacing: 1px;
@@ -103,6 +76,10 @@ h4, h5 {
 h6, p {
   font-size: 16px;
   line-height: 27px;
+  margin-bottom: 20px;
+}
+p {
+  margin-bottom: 30px;
 }
 .btn {
   width: 190px; height: 45px;
@@ -117,7 +94,7 @@ h6, p {
   cursor: pointer;
 }
 /* COLORS & WEIGHT */
-h1, h2, .btn {
+h1, h2, .btn, #free h3 {
   color: #fff;
 }
 h4, h5, a {
@@ -129,11 +106,14 @@ h3, h6 {
 h2, h3, h6, p {
   font-weight: normal;
 }
-h4, .meet h5, .btn {
+h4, #meet h5, .btn {
   font-weight: bold;
 }
-.partners h5 {
+#partners h5 {
   color: #9193aa;
+}
+.text-center {
+  text-align: center;
 }
 /* SPECIFIC FONT SETTINGS */
 header a {
@@ -142,39 +122,181 @@ header a {
 h4, h5, figcaption, .btn {
   text-transform: uppercase;
 }
-#feats h4 {
-  text-align: center;
+#meet h3 {
+  margin: 20px 0 10px;
+}
+#meet figcaption {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #9193aa;
+  margin-bottom: 30px;
 }
 
-/* GENERAL SETTINGS */
-html {
-	box-sizing: border-box;
+
+
+
+
+
+/* SETTINGS RELATIVE TO THE PAGE */
+
+/* H E A D E R */
+header {
+  width: 100%;
+  height: 80px;
+  padding: 0 30px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-a {
-  text-decoration: none;
-}
-ul {
-  list-style-type: none;
-}
-main {
-  display: -webkit-flex;
-  display: -ms-flex;
+    nav {
+      width: 700px;
+      margin: 0 20px;
+
+      justify-content: space-around;
+      align-items: center;
+    }
+    nav, ul  {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    ul {
+      width: 500px;
+      justify-content: space-around;
+    }
+    header img {
+      width: 150px;
+    }
+    header .btn {
+      width: 150px;
+      height: 35px;
+
+      font-size: 12px;
+      line-height: 20px;
+    }
+/* M A I N */
+#intro {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
-.wrapper-big {
-  width: 1120px;
+#intro video {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  -webkit-filter: brightness(50%);
 }
-.wrapper-small {
-  width: 1008px;
+/* BENEFITS & FEATURES SECTION */
+#ben-n-feats > div {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
-.wrapper-smaller {
-  width: 832px;
+#ben-n-feats div div, #ben-n-feats img {
+  width: 50%;
+  padding: 40px;
 }
-.wrapper-small, .wrapper-big, .wrapper-smaller {
-  margin: 0 auto;
+
+/* TRY FOR FREE SECTION */
+#free {
+  background-color: #2E399B;
+}
+
+/* ABOUT US SECTION */
+#about-us .wrapper-big {
+  display: flex;
+  flex-flow: row nowrap;
+}
+    .card {
+      width: 245px;
+      margin-left: 30px;
+    }
+        .card div:first-child {
+          position: relative;
+          height: 350px;
+          border-radius: 5px 5px 0 0;
+
+          overflow: hidden;
+        }
+        .card img {
+          height:100%;
+          display: block;
+        }
+        .card div+div {
+          height: 40px;
+
+          position: relative;
+
+          box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        }
+        .card figcaption {
+          position: absolute;
+          top: 50%; left: 20%;
+          transform: translate(-50%,-50%);
+        }
+
+
+/* MEET US SECTION */
+#meet {
+  background-color: #F9F9F9;
+}
+
+/* FEATURES SECTION */
+#feats {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  background-color: #F9F9F9;
+}
+#feats .wrapper-big {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+    .block {
+      width: 250px;
+      padding: 15px;
+    }
+
+/* PARTNERS SECTION */
+#partners {
+  padding: 40px 0;
+
+  background-color: #F0F0F2;
+}
+#partners div div{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+/* F O O T E R */
+footer {
+  padding: 40px;
+}
+footer div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+footer .wrapper-big {
+  justify-content: space-between;
+}
+    footer .wrapper-big > div:first-child {
+      width: 40%;
+      justify-content: space-between;
+    }
+        footer .wrapper-big > div div, footer .wrapper-big > div:last-child {
+          flex-flow: column nowrap;
+        }
+footer button+button {
+  margin-top: 10px;
 }
