@@ -1,6 +1,180 @@
+/* H E A D E R */
+header {
+  width: 100%;
+  height: 80px;
+  padding: 0 30px;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+nav {
+  width: 700px;
+  margin: 0 20px;
+
+  justify-content: space-around;
+  align-items: center;
+}
+nav, ul  {
+  display: flex;
+  flex-flow: row nowrap;
+}
+ul {
+  width: 500px;
+  justify-content: space-around;
+}
+header img {
+  width: 150px;
+}
+header .btn {
+  width: 150px;
+  height: 35px;
+
+  font-size: 12px;
+  line-height: 20px;
+}
+/* M A I N */
+#intro {
+  width: 100%;
+  height: 400px;
+  background-color: #000;
+}
+
+/* BENEFITS & FEATURES PAGE */
+
+
+/* FEATURES PAGE */
+#feats {
+  padding: 50px 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  background-color: #F9F9F9;
+}
+#feats .wrapper-big {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.block {
+  width: 250px;
+  padding: 15px;
+}
+
+/* F O O T E R */
+
+/* FONT SETTINGS */
+h1, .btn, h4, h5, figcaption, .btn {
+  font-family: 'Raleway', sans-serif;
+}
+h2, h3, p, small, h6, header li {
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h3 {
+  font-size: 32px;
+  line-height: 50px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 22px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+h4, h5 {
+  letter-spacing: 1px;
+}
+h6, p {
+  font-size: 16px;
+  line-height: 27px;
+}
+.btn {
+  width: 190px; height: 45px;
+  background-color: #F70966;
+  border-radius: 5px;
+  border: 0px;
+
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+/* COLORS & WEIGHT */
+h1, h2, .btn {
+  color: #fff;
+}
+h4, h5, a {
+  color: #303cad;
+}
+h3, h6 {
+  color: #44444d;
+}
+h2, h3, h6, p {
+  font-weight: normal;
+}
+h4, .meet h5, .btn {
+  font-weight: bold;
+}
+.partners h5 {
+  color: #9193aa;
+}
+/* SPECIFIC FONT SETTINGS */
+header a {
+  color: #5c5d67;
+}
+h4, h5, figcaption, .btn {
+  text-transform: uppercase;
+}
+#feats h4 {
+  text-align: center;
+}
+
+/* GENERAL SETTINGS */
 html {
 	box-sizing: border-box;
 }
 *, *:before, *:after {
 	box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+main {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+.wrapper-big {
+  width: 1120px;
+}
+.wrapper-small {
+  width: 1008px;
+}
+.wrapper-smaller {
+  width: 832px;
+}
+.wrapper-small, .wrapper-big, .wrapper-smaller {
+  margin: 0 auto;
 }
