@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".main_nav a").click(function(){var a=$(this.hash);$("html, body").animate({scrollTop:a.offset().top},1500)});var a=$("#nav");$(window).scroll(function(){$(document).scrollTop()>100?a.addClass("small"):a.removeClass("small")})});

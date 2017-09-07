@@ -3,8 +3,310 @@
 
 
 /*  VARIABLES  */
+$color-text:        #5c5d67
+$color-text-invert: #FFFFFF
+$color-bg:          #FFFFFF
+$color-bg-features: #F9F9F9
+$color-bg-demo:     #2E399B
+$color-bg-partners: #F0F0F2
+$color-cta:         #F70A66
+$color-cta-hover:   #e00a5d
+$color-icon:        #12DABD
+
+$color-link: #303cad
 
 /* MIXINS */
 
 
 /* GENERIC */
+body
+  color: $color-text
+  background: $color-bg
+  font-family: 'Lato', sans-serif
+  font-size: 16px
+  line-height: 1.7em
+  padding-top: 100px
+
+a
+  color: $color-link
+  text-decoration: none
+
+.btn
+  font-family: Raleway
+  font-size: 14px
+  font-weight: 700
+  letter-spacing: 1.4px
+  color: $color-text-invert
+  text-transform: uppercase
+  background: $color-cta
+  display: inline-block
+  border-radius: 5px
+  padding: 11px 20px
+  &:hover
+    background: $color-cta-hover
+    color: $color-text-invert
+
+.wrapper
+  width: 1170px
+  margin: 0 auto
+
+/* LAYOUT */
+/* nav */
+.main_nav
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100px
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  padding: 0 50px
+  background: $color-bg
+  z-index: 10
+  transition: all .3s ease-in-out
+.main_nav.small
+  height: 60px
+nav a
+  color: $color-text
+  margin: 16px
+  &:hover
+    color: $color-link
+a.logo
+  width: 200px
+  margin-right: auto
+
+/* hero */
+.hero
+  width: 100%
+  height: 600px
+  overflow: hidden
+  position: relative
+  &::after
+    content: ''
+    background: rgba(0,0,0,.5)
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.hero video
+  min-width: 100%
+  min-width: 100%
+
+.headings
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  z-index: 1
+
+h1
+  font-family: 'Raleway', sans-serif
+  font-size: 60px
+  line-height: 70.2px
+  color: $color-text-invert
+  font-weight: 800
+  letter-spacing: 1.5px
+  span
+    display: block
+    font-family: 'Lato', sans-serif
+    font-size: 24px
+
+/* welcome */
+.welcome
+  display: flex
+  justify-content: center
+
+h2
+  font-size: 32px
+  line-height: 50px
+  text-align: center
+  font-weight: normal
+h3
+  font-size: 32px
+  font-weight: normal
+
+.section
+  display: flex
+  align-items: center
+  div
+    width: 50%
+  img
+    width: 90%
+.section:nth-of-type(odd)
+  flex-direction: row-reverse
+
+.features
+  background: $color-bg-features
+  h2
+    font-size: 20px
+    color: $color-link
+    letter-spacing: 1.7px
+  img
+    width: 50px
+    height: 50px
+  .wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+.feature
+  width: 25%
+  padding: 15px
+.section_title
+  font-family: 'Raleway', sans-serif
+  color: $color-link
+  font-size: 16px
+  letter-spacing: 1.3px
+  font-weight: 600
+  text-transform: uppercase
+
+/* demo */
+.demo
+  background: $color-bg-demo
+  padding: 72px 0
+.demo .wrapper
+   text-align: center
+.demo h4
+  margin: 20px 0 50px 0
+  font-size: 32px
+  font-weight: 500
+  color: $color-text-invert
+/* About */
+.about
+  .wrapper
+    display: flex
+    div
+      width: 50%
+.about h2, .event h2
+  color: $color-link
+  font-size: 16px
+  letter-spacing: 1.3px
+  text-transform: uppercase
+  font-weight: 600
+.about h2
+  text-align: left
+.about_heading
+  color: #44444d
+  font-family: 'Lato', sans-serif
+  font-size: 32px
+  line-height: 42px
+  font-weight: normal
+figure
+  width: 245px
+  overflow: hidden
+  position: relative
+  border-radius: 5px 5px 0 0
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1)
+  figcaption
+    padding: 20px 30px
+    color: #9193aa
+    font-family: 'Raleway', sans-serif
+    text-transform: uppercase
+    font-weight: 600
+    letter-spacing: 1.2px
+  img
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    height: 350px
+.about-img
+  display: flex
+  justify-content: space-around
+
+/* meet us */
+.event
+  background: #F9F9F9
+  height: 760px
+.event h2
+  text-align: center
+
+.event h4
+  color: #44444d
+  font-size: 'Lato', sans-serif
+  font-size: 32px
+  line-height: 42px
+  font-weight: normal
+
+.event span
+  font-family: 'Raleway', sans-serif
+  font-size: 14px
+  letter-spacing: 1.2px
+  font-weight: 600
+  text-transform: uppercase
+
+.slider
+  position: relative
+.slide
+  border: 1ps solid red
+  width: 45%
+  img
+    width: 100%
+    border-radius: 5px
+.slide:nth-of-type(1)
+  position: absolute
+  left: 0
+  transform: translateX(-50%)
+  opacity: .3
+.slide:nth-of-type(2)
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+.slide:nth-of-type(3)
+  position: absolute
+  right: 0
+  transform: translateX(50%)
+  opacity: .3
+/* partners */
+.partners
+  background: #F0F0F2
+  height: 150px
+  h4
+    margin: 0
+    color: #9193aa
+    font-family: 'Raleway', sans-serif
+    font-size: 16px
+    letter-spacing: 1.3px
+    font-weight: 600
+    text-transform: uppercase
+    text-align: center
+  .panels
+    //overflow: hidden
+  .panel
+    margin: 0 auto
+    width: 1170px
+    display: flex
+    justify-content: space-around
+    align-items: center
+.panels_nav
+  text-align: center
+.panels_nav a
+  display: inline-block
+  width: 8px
+  height: 8px
+  border-radius: 50%
+  border: 1px solid #9193aa
+.panels_nav-selected
+  background: #9193aa
+  width: 12px
+  height: 12px
+
+/* footer */
+footer
+  width: 1170px
+  height: 190px
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+  a
+    display: block
+    color: $color-text
+    &:hover
+      color: $color-link
+  .btn
+    display: block
+    margin-bottom: 8px
+    width: 195px
+    text-align: center
