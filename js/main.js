@@ -16,4 +16,32 @@ var nav = $('#nav');
       nav.removeClass('small');
     }
   });
+
+  var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      // direction: 'horizontal',
+      // // loop: true,
+      autoplay: 3000,
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+      //spaceBetween: 30,
+      //freeMode: true,
+      // loop: true,
+      //loopAdditionalSlides: 1,
+      //keyboardControl: true,
+
+      // If we need pagination
+       pagination: '.swiper-pagination',
+       paginationClickable: true
+
+      // Navigation arrows
+      // nextButton: '.swiper-button-next',
+      // prevButton: '.swiper-button-prev'
+
+      // And if we need scrollbar
+      // scrollbar: '.swiper-scrollbar',
+    });
+
+
+
 });

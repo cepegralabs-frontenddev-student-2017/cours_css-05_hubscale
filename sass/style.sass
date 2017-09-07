@@ -42,6 +42,9 @@ a
   display: inline-block
   border-radius: 5px
   padding: 11px 20px
+  &.slim
+    font-size: 12px
+    padding: 4px 15px
   &:hover
     background: $color-cta-hover
     color: $color-text-invert
@@ -259,9 +262,19 @@ figure
   transform: translateX(50%)
   opacity: .3
 /* partners */
+.swiper-container
+  width: 1140px
+  height: 120px
+.swiper-pagination-bullet
+  background: none
+  border: 1px solid #9193aa
+.swiper-pagination-bullet-active
+  background: #9193aa
+.swiper-slide
+  text-align: center
 .partners
   background: #F0F0F2
-  height: 150px
+  height: 170px
   h4
     margin: 0
     color: #9193aa
@@ -271,14 +284,15 @@ figure
     font-weight: 600
     text-transform: uppercase
     text-align: center
+    padding: 10px
   .panels
     //overflow: hidden
   .panel
     margin: 0 auto
     width: 1170px
-    display: flex
-    justify-content: space-around
-    align-items: center
+    // display: flex
+    // justify-content: space-around
+    // align-items: center
 .panels_nav
   text-align: center
 .panels_nav a
